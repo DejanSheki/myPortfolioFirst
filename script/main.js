@@ -154,6 +154,7 @@ gsap.to('.jump-2', {
 gsap.to('.jump-3', {
     scrollTrigger: {
         trigger: '.jump-3',
+        start: 'top bottom-=80px',
         toggleActions: 'play complete pause reset'
     },
     opacity: 1,
