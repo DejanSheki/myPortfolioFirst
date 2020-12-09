@@ -426,6 +426,22 @@ header h2 {
     clip-path: polygon(28% 3%, 72% 3%, 74% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 26% 0%);
   }
 }
+.projects .path-wrap .clip-path .clip-path-container .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.projects .path-wrap .clip-path .clip-path-container .link a {
+  text-decoration: none;
+  border-bottom: none;
+  font-size: 1.5rem;
+}
+.projects .path-wrap .clip-path .clip-path-container .link a:hover {
+  color: var(--font-color);
+  transition: 1s ease;
+}
 .projects .path-wrap .clip-path .clip-path-container .container {
   display: flex;
   justify-content: space-between;
