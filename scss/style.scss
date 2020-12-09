@@ -136,6 +136,10 @@ nav {
             font-size: 1.7rem;
             font-weight: 100;
             bottom: 73px;
+            @media (max-width: 768px) {
+                bottom: 70px;
+                font-size: 1.5rem;
+            }
         }
         svg {
             bottom: 25px;

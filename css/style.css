@@ -126,6 +126,12 @@ nav .logo::after {
   font-weight: 100;
   bottom: 73px;
 }
+@media (max-width: 768px) {
+  nav .logo::after {
+    bottom: 70px;
+    font-size: 1.5rem;
+  }
+}
 nav .logo svg {
   bottom: 25px;
   height: 50px;
