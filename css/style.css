@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Amatic+SC:wght@400;700&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Nova+Square&display=swap");
 :root {
   --primary-color: #586998;
   --font-color: #0c0c21;
@@ -88,7 +89,7 @@ a:hover {
 }
 @media (max-width: 768px) {
   .stickyAdd {
-    padding: 10px 20px;
+    padding: 15px 20px;
   }
 }
 
@@ -101,23 +102,34 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 10px 60px;
+  padding: 15px 60px;
   transition: 1s ease;
 }
 @media (max-width: 768px) {
   nav {
-    padding: 5px 30px;
+    padding: 20px 30px;
   }
 }
 nav .logo {
-  font-size: 3rem;
-  font-family: "Amatic SC", cursive;
-  font-style: italic;
-  text-shadow: 6px 1px 5px var(--font-color);
+  border-bottom: none;
+  transition: 0.3s;
+  height: 0;
 }
-nav .logo:hover {
-  border-bottom: 3px solid transparent;
-  text-shadow: 3px 0px 2px var(--font-color);
+nav .logo::after {
+  content: "Dejan Lukić";
+  display: block;
+  position: relative;
+  font-family: "Nova Square", cursive;
+  color: var(--heading-color);
+  left: 38px;
+  font-size: 1.7rem;
+  font-weight: 100;
+  bottom: 73px;
+}
+nav .logo svg {
+  bottom: 25px;
+  height: 50px;
+  position: relative;
 }
 nav .menu {
   display: flex;
@@ -250,7 +262,7 @@ nav .bars-open .bar:nth-child(3) {
     display: none;
     background: var(--bg-color);
     position: absolute;
-    top: 75px;
+    top: 63px;
     left: 0;
     width: 100%;
     z-index: 1;
@@ -279,9 +291,9 @@ nav .bars-open .bar:nth-child(3) {
   color: #0677ff;
 }
 .intro .intro-text h2 {
-  font-family: "Amatic SC", cursive;
+  font-family: "Nova Square", cursive;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 100;
   font-style: italic;
 }
 @media (max-width: 768px) {
@@ -335,36 +347,36 @@ header {
   }
 }
 header .welcome-text {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   transform: translateX(500%);
   position: relative;
   z-index: -1;
 }
 @media (max-width: 768px) {
   header .welcome-text {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 header .welcome-text-d {
-  font-size: 3.5rem;
+  font-size: 3rem;
   transform: translateX(-500%);
   position: relative;
   z-index: -1;
 }
 @media (max-width: 768px) {
   header .welcome-text-d {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 header h1 {
   margin: 0;
-  font-family: "Amatic SC", cursive;
+  font-family: "Nova Square", cursive;
   color: var(--heading-color-2);
-  font-weight: 700;
+  font-weight: 100;
 }
 header h2 {
-  font-family: "Amatic SC", cursive;
-  font-weight: 700;
+  font-family: "Nova Square", cursive;
+  font-weight: 100;
   color: var(--heading-color);
   margin: 0;
 }
@@ -375,6 +387,7 @@ header h2 {
   margin-top: 100px;
 }
 .projects h1 {
+  font-family: "Nova Square", cursive;
   text-align: center;
   display: block;
   position: relative;
@@ -477,6 +490,7 @@ header h2 {
 .projects .path-wrap .clip-path .clip-path-container .container article a:hover i {
   transform: scale(1.2);
   color: #0677ff;
+  transition: 0.2s;
 }
 
 /*** skills ***/
@@ -485,6 +499,7 @@ header h2 {
   margin-top: 100px;
 }
 .skills h1 {
+  font-family: "Nova Square", cursive;
   text-align: center;
   display: block;
   position: relative;
@@ -696,6 +711,7 @@ header h2 {
   margin-top: 100px;
 }
 .profile h1 {
+  font-family: "Nova Square", cursive;
   text-align: center;
   display: block;
   position: relative;
@@ -791,39 +807,63 @@ footer {
     padding: 40px 20px;
   }
 }
-footer .logo {
-  color: var(--heading-color-2);
-  font-size: 3rem;
-  font-family: "Amatic SC", cursive;
-  font-style: italic;
-  text-shadow: 6px 1px 5px var(--font-color);
-  transition: none;
+footer .logodiv {
+  display: flex;
 }
-@media (max-width: 768px) {
-  footer .logo {
-    font-size: 2rem;
+footer .logodiv .logo {
+  border-bottom: none;
+  transition: 0.3s;
+  height: 0;
+}
+footer .logodiv .logo::after {
+  content: "Dejan Lukić";
+  display: block;
+  position: relative;
+  font-family: "Nova Square", cursive;
+  color: var(--heading-color);
+  left: 38px;
+  font-size: 1.7rem;
+  font-weight: 100;
+  bottom: 73px;
+}
+@media (max-width: 360px) {
+  footer .logodiv .logo::after {
+    font-size: 1.2rem;
+    bottom: 64px;
   }
 }
-footer .logo:hover {
-  transition: none;
-  text-shadow: 3px 0px 2px var(--font-color);
-  color: var(--heading-color-2);
+footer .logodiv .logo svg {
+  bottom: 25px;
+  height: 50px;
+  position: relative;
 }
-footer a {
+footer .iconsdiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  footer .iconsdiv {
+    flex-direction: column;
+  }
+}
+footer .iconsdiv a {
   font-size: 3rem;
   color: var(--heading-color-2);
   transition: 1s ease;
   cursor: pointer;
   border: none;
+  margin: 0 20px;
 }
 @media (max-width: 768px) {
-  footer a {
+  footer .iconsdiv a {
     font-size: 2rem;
   }
 }
-footer a:hover {
+footer .iconsdiv a:hover {
   color: #0677ff;
-  transform: scale(1.3);
+  transform: scale(1.2);
   transition: 1s ease;
   border: none;
 }
