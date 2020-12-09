@@ -128,7 +128,7 @@ nav .logo::after {
 }
 @media (max-width: 768px) {
   nav .logo::after {
-    bottom: 70px;
+    bottom: 68px;
     font-size: 1.5rem;
   }
 }
