@@ -48,7 +48,7 @@ $align) {
 }
 
 html {
-    scroll-padding-top: 150px;
+    scroll-padding-top: 140px;
 }
 
 body {
@@ -108,6 +108,10 @@ a {
     @media (max-width: 768px) {
         padding: 15px 20px;
     }
+}
+
+.active {
+    color: var(--heading-color);
 }
 
 nav {
@@ -173,7 +177,7 @@ nav {
                     border-bottom: none;
                 }
             }
-            li:after {
+            li::after {
                 content: '';
                 display: block;
                 width: 0px;
@@ -202,7 +206,6 @@ nav {
                 }
                 .click {
                     background-color: #586998;
-                    ;
                     bottom: 0;
                     cursor: pointer;
                     left: 0;
@@ -400,7 +403,7 @@ header {
         }
     }
     .path-wrap {
-        filter: drop-shadow(0px 0px 8px var(--font-color));
+        filter: drop-shadow(0px 0px 3px var(--font-color));
         .clip-path {
             background: var(--heading-color);
             clip-path: polygon(28% 10%, 72% 10%, 74% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 26% 0%);
@@ -520,7 +523,7 @@ header {
         }
     }
     .path-wrap {
-        filter: drop-shadow(0px 0px 8px var(--font-color));
+        filter: drop-shadow(0px 0px 3px var(--font-color));
         .clip-path {
             background: var(--heading-color);
             clip-path: polygon(28% 8%, 72% 8%, 74% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 26% 0%);
@@ -695,7 +698,7 @@ header {
         }
     }
     .path-wrap {
-        filter: drop-shadow(0px 0px 8px var(--font-color));
+        filter: drop-shadow(0px 0px 3px var(--font-color));
         .clip-path {
             background: var(--heading-color);
             clip-path: polygon(28% 11%, 72% 11%, 74% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 26% 0%);
@@ -723,7 +726,7 @@ header {
                         center);
                         background: var(--bg-color-2);
                         padding: 20px;
-                        margin: 0 auto;
+                        margin: 0 auto 20px;
                         @media (max-width: 768px) {
                             width: 100%;
                         }

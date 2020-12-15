@@ -177,3 +177,45 @@ $(document).ready(function() {
         }
     });
 });
+
+//add active class
+$(document).ready(function() {
+    $(document).on('scroll', onScroll);
+
+    //smoothscroll
+    $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $(document).off('scroll');
+
+        $('a').each(function() {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 0, 'swing', function() {
+            window.location.hash = target;
+            $(document).on('scroll', onScroll);
+        });
+    });
+});
+
+// Use Your Class or ID For Selection 
+
+function onScroll(event) {
+    var scrollPos = $(document).scrollTop() + 250;
+    $('.menu ul li a').each(function() {
+        var currLink = $(this);
+        var refElement = $(currLink.attr('href'));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() + 200 > scrollPos) {
+            $('.menu ul li a').removeClass('active');
+            currLink.addClass('active');
+        } else {
+            currLink.removeClass('active');
+        }
+    });
+}
